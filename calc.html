@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>LifeSaver Calculator</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <h1>Let the Calculator do the Math for you!</h1>
+
+  <!--
+  Probably the simplest way to make JavaScript
+  interact with your HTML is to call your script
+  from an element's event attribute.
+
+  This is generally not considered best practice,
+  but it gets us going!
+-->
+
+<!--
+onchange is an event that fires when the element's
+value has changed and the element is no longer
+focused.
+
+this.value is just one way of saying, take the value
+of this element, and use it
+-->
+<input type="text" onchange="setX(this.value)">
+
+<input type="text" onchange="setY(this.value)">
+
+<!--
+onclick fires whenever the user clicks an element
+-->
+<button onclick="add()">+</button>
+
+<button onclick="subtract()">-</button>
+
+<button onclick="divide()">/</button>
+
+<button onclick="multiply()">*</button>
+
+<button onclick="modulus()">%</button>
+
+<script src="calc.js"></script>
+
+</body>
+</html>
